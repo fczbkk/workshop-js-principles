@@ -1,0 +1,10 @@
+{
+  "name": "rollup-sample",
+  "version": "1.0.0",
+  "devDependencies": {
+    "rollup": "^0.25.4"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/rollup --format iife -- index.js > bundle.js"
+  }
+}
