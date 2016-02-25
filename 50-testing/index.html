@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script src="measure-pivot-distance.js"></script>
+
+    <script>
+      window.addEventListener('load', function () {
+        var anchor_element = document.getElementById('anchor');
+
+        document.addEventListener('click', function (event) {
+          var target_element = event.target;
+          console.log(measurePivotDistance(anchor_element, target_element));
+        });
+
+      });
+    </script>
+
+    <style>
+      div {
+        position: absolute;
+        border: 1px solid red;
+      }
+      #anchor {
+        background: yellow;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="anchor" style="width: 100px; height: 100px; left: 100px; top: 100px;"></div>
+    <div style="width: 100px; height: 200px; left: 300px; top: 400px;"></div>
+    <div style="width: 100px; height: 100px; left: 400px; top: 100px;"></div>
+    <div style="width: 100px; height: 100px; left: 100px; top: 400px;"></div>
+  </body>
+</html>
