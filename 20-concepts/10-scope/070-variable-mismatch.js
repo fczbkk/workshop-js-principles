@@ -18,4 +18,4 @@ function showFish() {
 
 showAnimal();  // -> dog
 showFish();    // -> fish
-showAnimal()   // -> fish
+showAnimal();  // -> fish

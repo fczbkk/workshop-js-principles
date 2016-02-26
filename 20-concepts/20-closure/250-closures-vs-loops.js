@@ -6,13 +6,13 @@
 // closures + loops = trouble
 
 function generateButtons() {
-  buttons = [];
+  var buttons = [];
   for (var i = 0; i < 10; i++) {
     var button = {
       press: function () {
         console.log("Pressed button #" + i);
       }
-    }
+    };
     buttons.push(button);
   }
   return buttons;

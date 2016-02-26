@@ -13,6 +13,6 @@ var animalObject = {
   showAnimal: function () {
     setTimeout(function () {console.log(this.animal);}, 1000);
   }
-}
+};
 
 animalObject.showAnimal();  // -> dog
