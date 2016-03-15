@@ -5,9 +5,19 @@ var me = {
 console.log(me);
 
 
+function clone (input_object) {
+  var cloned_object = {};
+  for (var key in input_object) {
+    cloned_object[key] = input_object[key];
+  }
+  return cloned_object;
+}
+
+
 function addGreeting (person, greeting) {
-  person.greeting = greeting;
-  return person;
+  var result = clone(person);
+  result.greeting = greeting;
+  return result;
 }
 
 

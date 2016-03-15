@@ -14,13 +14,13 @@ function cacheable (fn) {
 
 var greeting = 'hello';
 
-var greetPerson = cacheable(function (name) {
+var greetPerson = cacheable(function (name, greeting) {
   return greeting + ' ' + name;
 });
 
 
 
 
-console.log(greetPerson('Riki'));
+console.log(greetPerson('Riki', greeting));
 greeting = 'hi';
-console.log(greetPerson('Riki'));
+console.log(greetPerson('Riki', greeting));

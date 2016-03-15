@@ -1,11 +1,15 @@
-function greetPerson (greeting, person) {
-  return greeting + ' ' + person;
+function getSeparator () {
+  return ' ';
 }
 
-function sayHelloTo (person) {
-  return greetPerson('hello', person);
+function addPerson (input) {
+  return input + 'Riki';
+}
+
+function addGreeting (input) {
+  return 'hello' + input;
 }
 
 console.log(
-  sayHelloTo('Riki')
+  addGreeting(addPerson(getSeparator()))
 );
