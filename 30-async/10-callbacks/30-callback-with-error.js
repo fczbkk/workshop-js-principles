@@ -1,4 +1,12 @@
-var getData = require('./../get-data');
+var database = require('./../database');
+
+function getData (id, callback) {
+  var data = database[id];
+  setTimeout(function () {
+    callback(data.error, data.response)
+  }, data.delay);
+}
+
 
 
 function handleResponse (error, response) {

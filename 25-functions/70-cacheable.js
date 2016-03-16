@@ -11,7 +11,7 @@ console.log(calculate(2));
 console.log(calculate(2));
 
 
-
+/*
 function cacheable (fn) {
   var memory = {};
 
@@ -30,3 +30,5 @@ var calculateFast = cacheable(calculate);
 console.log(calculateFast(1));
 console.log(calculateFast(2));
 console.log(calculateFast(2));
+
+*/

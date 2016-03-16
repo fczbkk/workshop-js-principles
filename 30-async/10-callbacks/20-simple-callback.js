@@ -1,4 +1,11 @@
-var getData = require('./../get-data-simple-callback');
+var database = require('./../database');
+
+function getData (id, callback) {
+  var data = database[id];
+  setTimeout(function () {
+    callback(data.response)
+  }, data.delay);
+}
 
 
 getData('one', console.log);

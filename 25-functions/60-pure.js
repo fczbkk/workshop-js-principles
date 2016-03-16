@@ -13,12 +13,17 @@ function clone (input_object) {
   return cloned_object;
 }
 
-
 function addGreeting (person, greeting) {
   var result = clone(person);
   result.greeting = greeting;
   return result;
 }
+
+/*
+function addGreeting (person, greeting) {
+  return Object.assign({}, person, {greeting: greeting});
+}
+*/
 
 
 var me_with_greeting = addGreeting(me, 'hello');
