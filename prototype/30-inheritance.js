@@ -1,13 +1,23 @@
 var Person = function (name) {
   this.name = name;
+  this.greeting = 'Hello';
 };
 
 Person.prototype.greet = function () {
-  console.log('Hello ' + this.name + '!');
+  console.log(this.greeting + ' ' + this.name + '!');
 };
+
+var Pirate = function (name) {
+  Person.call(this);
+  this.name = name;
+  this.greeting = 'Arrr';
+};
+
+Pirate.prototype = Object.create(Person.prototype);
+Pirate.prototype.constructor = Pirate;
 
 var me = new Person('Riki Fridrich');
 me.greet();
 
-var stranger = new Person('stranger');
-stranger.greet();
+var john = new Pirate('John Long Silver');
+john.greet();
