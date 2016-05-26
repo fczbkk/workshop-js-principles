@@ -14,7 +14,7 @@ var message = "this is";
 function showAnimal() {
 
   // parent function's variable
-  name = "dog";
+  var name = "dog";
 
   function constructAnimalDescription() {
     // function's own variable
