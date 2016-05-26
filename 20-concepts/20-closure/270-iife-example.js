@@ -8,6 +8,6 @@
 
 (function () {
   console.log("something");
-})()
+})();
 
 // -> something
