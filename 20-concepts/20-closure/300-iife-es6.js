@@ -2,20 +2,20 @@
 
 
 
-// applied IIFE
-
 function generateButtons() {
   var buttons = [];
   for (var i = 0; i < 10; i++) {
-    
-    (function (button_id) {
+
+    {
+      let button_id = i;
+
       var button = {
         press: function () {
           console.log("Pressed button #" + button_id);
         }
       };
       buttons.push(button);
-    })(i);
+    }
 
   }
   return buttons;
