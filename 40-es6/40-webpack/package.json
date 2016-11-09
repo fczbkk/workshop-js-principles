@@ -8,6 +8,6 @@
     "webpack": "^1.12.14"
   },
   "scripts": {
-    "build": "./node_modules/.bin/webpack"
+    "build": "webpack"
   }
 }

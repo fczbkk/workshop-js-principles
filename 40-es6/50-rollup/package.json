@@ -5,6 +5,6 @@
     "rollup": "^0.25.4"
   },
   "scripts": {
-    "build": "./node_modules/.bin/rollup --format iife -- index.js > bundle.js"
+    "build": "rollup --format iife -- index.js > bundle.js"
   }
 }

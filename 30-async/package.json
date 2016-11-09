@@ -10,6 +10,6 @@
     "babel-preset-es2015": "^6.3.13"
   },
   "scripts": {
-    "babel": "./node_modules/.bin/babel ./40-await --watch --out-dir ./40-await-compiled"
+    "babel": "babel ./40-await --watch --out-dir ./40-await-compiled"
   }
 }
