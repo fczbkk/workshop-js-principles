@@ -1,0 +1,7 @@
+{
+  "name": "testing-assert",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node index.spec.js"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "testing-mocha",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "mocha index.spec.js",
+    "dev": "npm run test -- --watch"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  }
+}

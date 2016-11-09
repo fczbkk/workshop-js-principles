@@ -1,0 +1,12 @@
+{
+  "name": "testing-chai",
+  "version": "1.0.0",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  },
+  "scripts": {
+    "test": "mocha index.spec.js",
+    "dev": "npm run test -- --watch"
+  }
+}
