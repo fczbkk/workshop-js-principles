@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .box {position: absolute; left: 0px; width: 100px; height: 100px; background: red;}
+
+    .animated_box {
+      animation: move_box;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+    }
+
+    @keyframes move_box {
+      0% {
+        left: 0px;
+      }
+      100% {
+        left: 300px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <p>
+    <a href="javascript:void(startBasicAnimation(box1));">basic animation</a> |
+    <a href="javascript:void(startSmoothAnimation(box2));">smooth animation</a> |
+    <a href="javascript:void(startCssAnimation(box3));">css animation</a> |
+    <a href="javascript:void(animateAll());">all animations</a>
+  </p>
+
+  <div class="box" id="box1" style="top: 50px;"></div>
+  <div class="box" id="box2" style="top: 200px;"></div>
+  <div class="box" id="box3" style="top: 350px;"></div>
+
+  <script src="index.js"></script>
+
+</body>
+</html>
