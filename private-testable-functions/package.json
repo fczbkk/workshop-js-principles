@@ -1,0 +1,21 @@
+{
+  "name": "private-testable-functions",
+  "version": "1.0.0",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-latest": "^6.24.1",
+    "jasmine": "^2.6.0",
+    "jasmine-core": "^2.6.1",
+    "karma": "^1.6.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-webpack": "^2.0.3",
+    "phantomjs-prebuilt": "^2.1.14",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "karma start ./karma.conf.js"
+  }
+}
