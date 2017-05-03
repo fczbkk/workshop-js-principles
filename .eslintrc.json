@@ -1,12 +1,12 @@
 {
-  "parserOptions": {
-    "ecmaVersion": 6
-  },
   "env": {
-    "browser": true
+    "browser": true,
+    "node": true,
+    "es6": true
   },
   "extends": "eslint:recommended",
   "rules": {
-    "no-console": "off"
-  }
+    "no-console": 0
+  },
+  "root": true
 }
