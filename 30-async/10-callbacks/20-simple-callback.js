@@ -1,13 +1,10 @@
-var database = require('./../database');
-
-function getData (id, callback) {
-  var data = database[id];
+function callbackWithDelay (delay, callback) {
   setTimeout(function () {
-    callback(data.response)
-  }, data.delay);
+    callback(delay);
+  }, delay * 1000);
 }
 
 
-getData('one', console.log);
-getData('two', console.log);
-getData('three', console.log);
+callbackWithDelay(1, console.log);
+callbackWithDelay(2, console.log);
+callbackWithDelay(3, console.log);

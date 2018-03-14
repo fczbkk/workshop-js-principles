@@ -1,23 +1,22 @@
-var database = require('./../database');
-
-function getData (id, callback) {
-  var data = database[id];
-  setTimeout(function () {
-    callback(data.error, data.response)
-  }, data.delay);
+function callbackWithDelay (delay, callback) {
+  if (typeof delay === 'number') {
+    setTimeout(function () {
+      callback(null, delay);
+    }, delay * 1000);
+  } else {
+    callback('Delay must be number.', delay);
+  }
 }
-
 
 
 function handleResponse (error, response) {
   if (error) {
     console.error('error:', error);
   } else {
-    console.log('response:', response);
+    console.log('success:', response);
   }
 }
 
-getData('one', handleResponse);
-getData('two', handleResponse);
-getData('three', handleResponse);
-getData('wrong', handleResponse);
+
+callbackWithDelay(1, handleResponse);
+callbackWithDelay('xxx', handleResponse);
