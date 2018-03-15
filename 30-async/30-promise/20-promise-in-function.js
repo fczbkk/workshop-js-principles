@@ -1,19 +1,13 @@
-var database = require('./../database');
-
-
-function getData (id) {
-  var data = database[id];
-
+function getData (delay) {
   return new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      if (data.error) {
-        reject(data.error);
-      } else {
-        resolve(data.response);
-      }
-    }, data.delay);
+    if (typeof delay === 'number') {
+      setTimeout(function () {
+        resolve(delay);
+      }, delay * 1000);
+    } else {
+      reject('Delay must be number.');
+    }
   });
-
 }
 
 
@@ -27,7 +21,7 @@ function handleError(reason) {
 }
 
 
-getData('three')
+getData(3)
   .then(handleResult)
   .catch(handleError);
 

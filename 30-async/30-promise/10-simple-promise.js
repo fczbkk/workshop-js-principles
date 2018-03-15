@@ -1,14 +1,15 @@
-var database = require('./../database');
-
 var my_promise = new Promise(function (resolve, reject) {
-  var data = database['three'];
-  setTimeout(function () {
-    if (data.error) {
-      reject(data.error);
-    } else {
-      resolve(data.response);
-    }
-  }, data.delay);
+
+  var delay = 3;
+
+  if (typeof delay === 'number') {
+    setTimeout(function () {
+      resolve(delay);
+    }, delay * 1000);
+  } else {
+    reject('Delay must be number.');
+  }
+
 });
 
 function handleResult(result) {
