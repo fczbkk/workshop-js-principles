@@ -1,18 +1,26 @@
 class Person {
-  greeting = 'Hi';
 
   constructor (name) {
     this.name = name;
   }
 
+  getGreeting () {
+    return 'Hi';
+  }
+
   greet () {
-    console.log(this.greeting + ', ' + this.name + '.');
+    console.log(this.getGreeting() + ', ' + this.name + '.');
   }
 
 }
 
 class Pirate extends Person {
-  greeting = 'Arrr';
+
+  getGreeting () {
+    return 'Arrr';
+  }
+
+
 }
 
 
