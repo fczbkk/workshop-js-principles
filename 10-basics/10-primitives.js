@@ -11,7 +11,7 @@ console.log(typeof true);
 // number
 console.log(typeof 123.456);
 console.log(typeof Math.PI);
-
+console.log(typeof 0xFF);
 
 // string
 console.log(typeof 'abc \'aaa\' bbb');
