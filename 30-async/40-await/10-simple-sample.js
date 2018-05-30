@@ -1,6 +1,3 @@
-require("babel-polyfill");
-
-
 function splitName (name) {
   return new Promise(function (resolve, reject) {
     resolve(name.split(' '));
