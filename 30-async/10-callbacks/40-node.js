@@ -1,6 +1,7 @@
 var fs = require('fs');
+const path = require('path')
 
-fs.readdir('./../sample/', function (error, items_list) {
+fs.readdir(path.resolve(__dirname, '../sample/'), function (error, items_list) {
   if (error) {
     throw new Error(error);
   } else {
