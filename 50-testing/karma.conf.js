@@ -13,7 +13,7 @@ module.exports = function(config) {
       "coverage"
     ],
     browsers: [
-      "PhantomJS"
+      "ChromeHeadless"
     ],
     preprocessors: {
       "measure-pivot-distance.js": ["coverage"]
