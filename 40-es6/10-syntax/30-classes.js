@@ -16,16 +16,18 @@ class Person {
 
 class Pirate extends Person {
 
+  constructor (name) {
+    super(name.toUpperCase())
+  }
+
   getGreeting () {
     return 'Arrr';
   }
 
-
 }
 
-
-var me = new Person('Riki Fridrich');
+const me = new Person('Riki Fridrich');
 me.greet();
 
-var john = new Pirate('John Long Silver');
+const john = new Pirate('John Long Silver');
 john.greet();
