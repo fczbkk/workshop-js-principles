@@ -19,7 +19,7 @@ console.log(5 * []);         // 0
 console.log(5 * null);       // 0
 console.log(5 * true);       // 1
 console.log(5 * false);      // 0
-console.log(5 * '1');        // parseFloat
+console.log(5 * '1');        // Number
 
 
 // to string
