@@ -2,7 +2,7 @@ function noParams () {
   console.log('This function expects no parameters.')
 }
 
-function singlePaaram (first) {
+function singleParam (first) {
   console.log('This function expects one parameter.')
 }
 
@@ -15,7 +15,7 @@ function variableParams (first, ...other) {
 }
 
 console.log('no', noParams.length)
-console.log('single', singlePaaram.length)
+console.log('single', singleParam.length)
 console.log('multi', multiParams.length)
 console.log('variable', variableParams.length)
 
