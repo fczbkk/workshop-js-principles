@@ -17,7 +17,7 @@ console.log(5 * undefined);  // NaN
 console.log(5 * {});         // NaN
 console.log(5 * []);         // 0
 console.log(5 * null);       // 0
-console.log(5 * true);       // 1
+console.log(5 * true);       // 5
 console.log(5 * false);      // 0
 console.log(5 * '1');        // Number
 
