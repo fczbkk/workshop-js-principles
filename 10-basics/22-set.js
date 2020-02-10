@@ -2,7 +2,7 @@ const mySet = new Set(['a', 'b'])
 mySet.add('c')
 
 mySet.has('a') // true
-mySet.has('x') // true
+mySet.has('x') // false
 
 mySet.values()
 mySet.keys()
