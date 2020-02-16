@@ -1,5 +1,8 @@
-// returns X and Y coordinates of box, defined by top/left position
-// and width/height size
+/**
+ * Returns X and Y coordinates of a middle point of a box.
+ * @param box
+ * @returns {{x: number, y: number}}
+ */
 function getPivot (box) {
   return {
     x: box.left + (box.width / 2),
@@ -7,22 +10,23 @@ function getPivot (box) {
   }
 }
 
-
-// returns box object representing top/left position and width/height size
-// of an element
+/**
+ * Returns a box represented by top/left position and its width/height.
+ * @param {Element} element
+ * @returns {{top: number, left: number, width: number, height: number}}
+ */
 function getBox (element) {
-  return element.getBoundingClientRect();
+  return element.getBoundingClientRect()
 }
-
 
 document.addEventListener('click', function (event) {
 
-  var box1 = getBox(event.target);
-  var box2 = getBox(document.getElementById('#myElement'));
+  const box1 = getBox(event.target)
+  const box2 = getBox(document.getElementById('#myElement'))
 
-  var pivot1 = getPivot(box1);
-  var pivot2 = getPivot(box2);
+  const pivot1 = getPivot(box1)
+  const pivot2 = getPivot(box2)
 
-  console.log(Math.sqrt(Math.pow(pivot1.x - pivot2.x, 2) + Math.pow(pivot1.y - pivot2.y, 2)));
+  console.log(Math.sqrt(Math.pow(pivot1.x - pivot2.x, 2) + Math.pow(pivot1.y - pivot2.y, 2)))
 
-});
+})
