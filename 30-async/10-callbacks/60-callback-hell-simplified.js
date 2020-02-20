@@ -1,6 +1,7 @@
 var fs = require('fs');
+var p = require('path')
 
-var path = './../sample/';
+var path = p.resolve(__dirname, '../sample/');
 
 
 function handleItemsList (error, items_list) {
@@ -13,7 +14,7 @@ function handleItemsList (error, items_list) {
 
 
 function handleItem (item) {
-  var item_path = path + item;
+  var item_path = p.resolve(path, item)
   fs.stat(item_path, function (error, item_stats) {
     checkItemStats(error, item_stats, item_path);
   });
